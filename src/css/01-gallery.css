@@ -40,3 +40,8 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+/* ------------LIST FIX------------ */
+li{
+  list-style: none;
+}
