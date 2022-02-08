@@ -9,7 +9,7 @@ const STORAGE_KEY = "feedback-form-state";
 function onFormInput(e){
     const {name, value} = e.target
 
-    const parsedData = storage.get(STORAGE_KEY) ?? {};
+    const parsedData = storage.get(STORAGE_KEY) || {};
     const formData = {
         ...parsedData,
         [name]:value
@@ -18,7 +18,7 @@ function onFormInput(e){
 }
 
 const reuseData = () => {
-    const parsedData = storage.get(STORAGE_KEY) ?? {};
+    const parsedData = storage.get(STORAGE_KEY) || {};
     const inputNames = Object.keys(parsedData);
 
   inputNames.forEach(inputName => {
